@@ -16,9 +16,13 @@ class Cidadao(models.Model):
 class Grupo(models.Model):
     nome = models.CharField('Nome', max_length=100)
     idade = models.PositiveSmallIntegerField('Idade')
+    def __str__(self):
+        return f'{self.nome} - {self.idade}+'
 
 class Local(models.Model):
     nome = models.CharField('Nome', max_length=100)
     logradouro = models.CharField('Logradouro', max_length=100)
     bairro = models.CharField('Bairro', max_length=25)
     cidade = models.CharField('Cidade', max_length=25)
+    def __str__(self):
+        return f'{self.nome} - {self.cidade}'
