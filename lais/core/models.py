@@ -2,7 +2,13 @@ from django.db import models
 
 # Create your models here.
 class Agendamento(models.Model):
-    datahora = models.DateTimeField('Data e hora', auto_now=True)
+    datahora = models.DateTimeField('Data e hora')
     local = models.CharField('Local', max_length=100)
     idade = models.PositiveSmallIntegerField('Idade')
     status = models.CharField('Status', max_length=10)
+
+class Cidadao(models.Model):
+    nome = models.CharField('Nome', max_length=100)
+    data = models.DateField('Data de nascimento')
+    email = models.EmailField('Email', max_length=254)
+    senha = models.CharField('Senha', max_length=254)
