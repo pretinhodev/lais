@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Grupo, Local
+from .models import Agendamento, Cidadao, Grupo, Local
 
 class GrupoAdmin(admin.ModelAdmin):
     list_display = ('nome', 'idade')
